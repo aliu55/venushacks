@@ -13,6 +13,7 @@ const SelectionPage = ({ userSelection, setUserSelection }) => {
 
     useEffect(() => {
         console.log(userSelection); 
+        console.log();
         console.log(results);
     }, [userSelection, results]);
 

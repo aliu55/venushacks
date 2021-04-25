@@ -3,7 +3,7 @@ import './PlanButton.css';
 
 const PlanButton = ({ userSelection, results, setResults }) => {
 
-    const handleClick = () => {
+    const handleClick = async () => {
         const healthList = [];
         const fitnessList = [];
         const selfcareList = [];
@@ -18,7 +18,7 @@ const PlanButton = ({ userSelection, results, setResults }) => {
         // make api call to YouTube API
         selfcareList.push('Drawing tutorial', 'link to tutorial', 'image for tutorial')
 
-        setResults((results) => ({...results, title: healthList, fitness: fitnessList, selfcare: selfcareList}));
+        setResults((results) => ({...results, health: healthList, fitness: fitnessList, selfcare: selfcareList}));
         
     };
     
