@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PlanButton.css';
+import Youtube from '../../api/youtube';
 
 const PlanButton = ({ userSelection, results, setResults }) => {
 
@@ -13,8 +14,12 @@ const PlanButton = ({ userSelection, results, setResults }) => {
         healthList.push('Breakfast Sandwich', 'link to recipe', 'image to recipe')
 
         // make api call to YouTube API
-        fitnessList.push('10 min ab workout', 'link to workout', 'image for workout')
-
+        const fitnessVideo = Youtube(userSelection.fitness);
+        fitnessVideo.then((response) => {
+            console.log(response);
+            fitnessList.push(response[0], response[1], response[2]);
+        });
+        
         // make api call to YouTube API
         selfcareList.push('Drawing tutorial', 'link to tutorial', 'image for tutorial')
 
