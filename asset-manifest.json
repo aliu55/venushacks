@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/venushacks/static/css/main.542718a9.chunk.css",
-    "main.js": "/venushacks/static/js/main.ff6753f6.chunk.js",
-    "main.js.map": "/venushacks/static/js/main.ff6753f6.chunk.js.map",
+    "main.js": "/venushacks/static/js/main.d2df70a5.chunk.js",
+    "main.js.map": "/venushacks/static/js/main.d2df70a5.chunk.js.map",
     "runtime-main.js": "/venushacks/static/js/runtime-main.7a9d0699.js",
     "runtime-main.js.map": "/venushacks/static/js/runtime-main.7a9d0699.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/venushacks/static/css/2.4c97ca4f.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.0180bcd0.chunk.js",
     "static/css/main.542718a9.chunk.css",
-    "static/js/main.ff6753f6.chunk.js"
+    "static/js/main.d2df70a5.chunk.js"
   ]
 }
