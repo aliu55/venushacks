@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState, useEffect} from "react";
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import SelectionPage from './frontend/views/selectionPage/SelectionPage';
 import ResultPage from './frontend/views/resultPage/ResultPage';
 
@@ -10,16 +10,24 @@ function App() {
     'fitness': '',
     'selfcare': ''
   });
+
+  const [results, setResults] = useState({
+    "health": [],
+    "fitness": [],
+    "selfcare": []
+  });
     
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/">
-            <SelectionPage userSelection={userSelection} setUserSelection={setUserSelection} />
-        </Route>
-        {/* <Route path="/test">
-            <Test />
-        </Route> */}
+        <Switch>
+          <Route exact path="/" >
+              <SelectionPage userSelection={userSelection} setUserSelection={setUserSelection} results={results} setResults={setResults} />
+          </Route>
+          <Route exact path="/results">
+              <ResultPage results={results} setResults={setResults} />
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );

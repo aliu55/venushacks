@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Shadows+Into+Light&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bar {
+    background-color: #f3d1e1;
+    margin-bottom: 40px;
+}
+
+.heading{
+    font-family: 'Martel', serif;
+    letter-spacing: 3px;
+    margin-left: 75px;
+    margin-bottom: 25px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.category-result{
+    font-family: 'Martel', serif;
+    letter-spacing: 3px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.category-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.title{
+    font-family: 'Martel', serif;
+    letter-spacing: 3px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-bottom: 100px;
+}
