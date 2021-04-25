@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Shadows+Into+Light&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.choice {
+    margin: 10px 50px;
+}
+
+.category{
+    font-family: 'Martel', serif;
+    letter-spacing: 3px;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
