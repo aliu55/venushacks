@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* TOP SECTION */
+
+.top-panel a {
+    text-decoration: none;
+}
+
+/* sets the display flex of the container */
+.top-panel-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    max-width: 1200px;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+/* background image */
+.top-panel {
+    background-image: url('../../../images/sky.jpeg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+/* overlay effect */
+.top-panel::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+    z-index: -1;
+}
+
+/* text */
+.top-panel-title {
+    display: block;
+    /* width: fit-content; */
+    text-align: left;
+    font-size: 8rem;
+    letter-spacing: .1rem;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+}
+
+.top-panel-title span {
+    color: rgb(218, 172, 215);
+}
+
+/* portfolio button */
+.top-panel .portfolio-button {
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    margin: 20px 0px 0px 20px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+    text-decoration: none;
+}
+
+.portfolio-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+.top-panel-description {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 20px 0px 15px 0px;
+    width: 91%;
+    padding: 0 20px;
+    color: white;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+/* navbar */
+.bar{
+    background-color: #f3d1e1;
+    margin: 0px;
+}
+
+.nav-title {
+    letter-spacing: 4px;
+    margin: 10px;
+    margin-left: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+}

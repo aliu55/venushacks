@@ -8,7 +8,7 @@ const Edamam = async ({meal}) => {
 
     const bfastWords = ["eggs", "parfait", "fruit", "toast", "smoothie", "waffle",
                                 "muffin", "yogurt", "baked", "oats", "quick"]
-    const linnerWords = ["salad", "pasta", "casserole", "sandwich", "chicken", "rice",
+    const dinnerWords = ["salad", "pasta", "casserole", "sandwich", "chicken", "rice",
                             "soup", "egg", "ham", "saute", "vegetable"]
 
     const maxEntries = 20;
@@ -18,7 +18,7 @@ const Edamam = async ({meal}) => {
         var keyword = bfastWords[Math.floor(bfastWords.length * Math.random())];
     }
     else {
-        var keyword = linnerWords[Math.floor(linnerWords.length * Math.random())];
+        var keyword = dinnerWords[Math.floor(dinnerWords.length * Math.random())];
     }
         
     const response = await axios.get(`https://api.edamam.com/search`, {params: 

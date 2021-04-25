@@ -1,23 +1,22 @@
 import React, {useState, useEffect} from "react";
 import Navbar from 'react-bootstrap/Navbar'
 import './ResultPage.css';
-
-const IMG = "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"
+import { motion } from "framer-motion"
 
 const ResultPage = ({results, setResults}) => {
-    
-    console.log('helo');
-    console.log(results);
-    console.log(results.health[0]);
-    // for category in reslts:
-    // make title results[category][0]
-    // make image results[category][1]
-
 
     return (
-        <div>
+        <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: [0, 1],
+        }}
+        transition={{
+          duration: 1,
+        }}
+      className="user-card">
             <Navbar className = "bar">
-                <Navbar.Brand href="/" className = "title">Plan your day with [insert name]!</Navbar.Brand>
+                <Navbar.Brand href="/" className = "nav-title">Be Well</Navbar.Brand>
             </Navbar>
             
             <div className = 'heading'>Today </div>
@@ -26,13 +25,11 @@ const ResultPage = ({results, setResults}) => {
                 <div className="category-result">Health</div>
                 <div className="category-section">
                     <div className="thumbnail">
-                        <img src={results.health[2]} width = '300px' height='200px'/>
+                        <img src={results.health[2]} width = '300px' height='220px'/>
                     </div>
                     <div className="details">
                         <div className="title">{results.health[0]}</div>
-                        <div className="url">
-                            <a href={results.health[1]} target="_blank">See More</a>
-                        </div>
+                        <a href={results.health[1]} type="button" target="_blank" className="url-button">See More</a>
                     </div>
                 </div>
             </div>
@@ -41,13 +38,11 @@ const ResultPage = ({results, setResults}) => {
                 <div className="category-result">Fitness</div>
                 <div className="category-section">
                     <div className="thumbnail">
-                        <img src={results.fitness[2]} width = '300px' height='200px'/>
+                        <img src={results.fitness[2]} width = '300px' height='220px'/>
                     </div>
                     <div className="details">
                         <div className="title">{results.fitness[0]}</div>
-                        <div className="url">
-                            <a href={results.fitness[1]} target="_blank">See More</a>
-                        </div>
+                        <a href={results.fitness[1]} type="button" target="_blank" className="url-button">See More</a>
                     </div>
                 </div>
             </div>
@@ -56,26 +51,17 @@ const ResultPage = ({results, setResults}) => {
                 <div className="category-result">Self Care</div>
                 <div className="category-section">
                     <div className="thumbnail">
-                        <img src={IMG} width = '300px' height='200px'/>
+                        <img src={results.selfcare[2]} width = '300px' height='220px'/>
                     </div>
                     <div className="details">
                         <div className="title">{results.selfcare[0]}</div>
-                        <div className="url">
-                            <a href={results.fitness[1]} target="_blank">See More</a>
-                        </div>
+                        <a href={results.selfcare[1]} type="button" target="_blank" className="url-button">See More</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
         
     );
 };
 
 export default ResultPage;
-
-// const [results, setResults] = useState({
-//     "health": [],
-//     "fitness": [],
-//     "selfcare": []
-// });
-    

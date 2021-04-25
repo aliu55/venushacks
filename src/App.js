@@ -4,6 +4,7 @@ import React, {useState, useEffect} from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import SelectionPage from './frontend/views/selectionPage/SelectionPage';
 import ResultPage from './frontend/views/resultPage/ResultPage';
+import Home from './frontend/views/homePage/Home';
 
 function App() {
   const [userSelection, setUserSelection] = useState({
@@ -23,6 +24,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" >
+              <Home />
+          </Route>
+          <Route exact path="/select" >
               <SelectionPage userSelection={userSelection} setUserSelection={setUserSelection} results={results} setResults={setResults} />
           </Route>
           <Route exact path="/results">

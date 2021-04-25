@@ -1,33 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Shadows+Into+Light&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Shadows+Into+Light&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .bar {
     background-color: #f3d1e1;
-    margin-bottom: 40px;
+}
+
+.nav-title {
+    letter-spacing: 4px;
+    margin: 10px;
+    margin-left: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .heading{
-    font-family: 'Martel', serif;
     letter-spacing: 3px;
-    margin-left: 75px;
-    margin-bottom: 25px;
+    margin: 60px 0px 35px 75px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #c494ab;
+}
+
+.category-result{
+    letter-spacing: 3px;
     text-align: left;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 2rem;
-}
-
-.category-result{
-    font-family: 'Martel', serif;
-    letter-spacing: 3px;
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .category-section {
@@ -37,7 +49,6 @@
 }
 
 .title{
-    font-family: 'Martel', serif;
     letter-spacing: 3px;
     text-align: left;
     text-transform: uppercase;
@@ -49,7 +60,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 30px;
+    width: 60%;
 }
 
 .category-container {
@@ -57,4 +69,29 @@
     flex-direction: column;
     margin-left: 75px;
     margin-bottom: 100px;
+}
+
+img {
+    border-radius: 2rem;
+    box-shadow: -10px 15px 10px rgba(235,158,161, 0.6);
+}
+
+.url-button {
+    display: inline-block;
+    border: 2px solid #444441;
+    color: #2e2e2c;
+    font-size: 1.5rem;
+    padding: 8px 24px;
+    margin: 20px 0px 0px 0px;
+    width: 150px;
+    text-align: center;
+    letter-spacing: .1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.url-button:hover {
+    background-color: rgba(209,206,207, 0.3);
+    text-decoration: none;
+    color: black;
 }
