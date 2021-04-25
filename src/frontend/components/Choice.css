@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Shadows+Into+Light&display=swap');
+
+.choice-btn {
+    padding: 20px;
+    background-color: #F8E5EE;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-style: none;
+    letter-spacing: 1.5px;
+    font-weight: 500; 
+    font-size: 1.5rem;
+    font-family: 'Martel', serif;
+    transition: background-color 1s;
+}
+
+.choice-btn:hover {
+    background-color: #f3d1e1;
+}
+
+.choice-btn-selected {
+    padding: 20px;
+    background-color: #c9e881;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-style: none;
+    font-family: 'Martel', serif;    
+    letter-spacing: 1.5px;
+    font-weight: 500; 
+    font-size: 1.5rem;
+}
+/* 
+- round
+- color
+- text : font 
+- padding
+*/

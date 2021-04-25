@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import './Choice.css';
 
-const Choice = ({ name }) => {
-    // functions and variables and logic
+const Choice = ({ category, name, userSelection, setUserSelection}) => {
+    const updateSelection = () => {
+        setUserSelection((userSelection) => ({...userSelection, [category]: userSelection[category]=== name ? '' : name,}));
+    };
 
     return (
-        // for styling and for layout 
         <div>
-            {/* create a button with the name */}
-            <button className="choice-btn"
-            type="button">
+            <button className={userSelection[category] !== name ? "choice-btn" : "choice-btn-selected"}
+            type="button" onClick={updateSelection}>
                 {name}
             </button>
-            {/* when the button is clicked, then call a function to do something (or to update the selection into a list) */}
         </div>
     );
 };
