@@ -24,7 +24,7 @@ const Home = () =>{
                 <div className="top-panel-container">
                     <div>
                         <h1 className="top-panel-title">Be <span>Well</span></h1>
-                        <p className="top-panel-description">Life can get busy sometimes. From deciding what to eat to which workout to do, making these choices every day can get difficult and overwhelming. It's easy to forget to slow down and take a break. Be Well is a quick and simple way to incorporate health, fitness, and self care into your day. After you choose an option from each category, but we’ll surprise you with new resources each time! Whether you only have five minutes to spare on a workout or want to eat healthy but don’t know where to start, Be Well can help!
+                        <p className="top-panel-description">Life can get busy sometimes. From deciding what to eat to which workout to do, making these choices every day can get difficult and overwhelming. It's easy to forget to slow down and take a breath. Be Well is a quick and simple way to incorporate health, fitness, and self care into your day. After you choose an option from each category, we’ll surprise you with new resources each time! Whether you only have five minutes to spare on a workout or want to eat healthy but don’t know where to start, Be well can help!
 </p>
                         <Link to="/select"><a href="#" type="button" className="portfolio-button">Start Your Day Here</a></Link>
                     </div>

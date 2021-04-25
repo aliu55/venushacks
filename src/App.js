@@ -21,7 +21,7 @@ function App() {
     
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/venushacks">
         <Switch>
           <Route exact path="/" >
               <Home />
