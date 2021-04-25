@@ -6,7 +6,9 @@ const IMG = "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.
 
 const ResultPage = ({results, setResults}) => {
     
-    console.log(results)
+    console.log('helo');
+    console.log(results);
+    console.log(results.health[0]);
     // for category in reslts:
     // make title results[category][0]
     // make image results[category][1]
@@ -24,12 +26,12 @@ const ResultPage = ({results, setResults}) => {
                 <div className="category-result">Health</div>
                 <div className="category-section">
                     <div className="thumbnail">
-                        <img src={IMG} width = '300px' height='200px'/>
+                        <img src={results.health[2]} width = '300px' height='200px'/>
                     </div>
                     <div className="details">
                         <div className="title">{results.health[0]}</div>
                         <div className="url">
-                            <a href={results.fitness[1]} target="_blank">See More</a>
+                            <a href={results.health[1]} target="_blank">See More</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +41,7 @@ const ResultPage = ({results, setResults}) => {
                 <div className="category-result">Fitness</div>
                 <div className="category-section">
                     <div className="thumbnail">
-                        <img src={IMG} width = '300px' height='200px'/>
+                        <img src={results.fitness[2]} width = '300px' height='200px'/>
                     </div>
                     <div className="details">
                         <div className="title">{results.fitness[0]}</div>
@@ -64,8 +66,6 @@ const ResultPage = ({results, setResults}) => {
                     </div>
                 </div>
             </div>
-
-            
         </div>
         
     );

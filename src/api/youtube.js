@@ -2,7 +2,7 @@ import axios from "axios";
 require("dotenv").config();
 
 const YT_KEY = process.env.REACT_APP_YT_KEY;
-var videoLink = "youtube.com/watch?v=";
+var videoLink = "https://www.youtube.com/watch?v=";
 const playlistIDs = ['PL7DXUYkcsukWqgGIBzkzd6jykTdS2l2Tl', 'PLsGnm_jbLRKdqlru_shRc-xmKmUaagNJT', 'PL7DXUYkcsukUcQgjcbh2CGL5cP1Fc-BHl'];
 
 const getChosenPlaylist = (duration) => {
