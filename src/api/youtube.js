@@ -44,7 +44,7 @@ const Youtube = async (lengthChoice) => {
     const videos = res.data.items;
     const randomVid = getRandomVideo(videos);
 
-    return ([randomVid.snippet.title, videoLink + randomVid.id, randomVid.snippet.thumbnails.standard.url]);    
+    return ([randomVid.snippet.title, videoLink + randomVid.snippet.resourceId.videoId, randomVid.snippet.thumbnails.standard.url]);    
 }
 
 export default Youtube;

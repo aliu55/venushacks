@@ -6,31 +6,24 @@ import Edamam from '../../api/Edamam.js'
 
 const PlanButton = ({ userSelection, results, setResults }) => {
 
-    const handleClick = () => {
+    const handleClick = async () => {
         const healthList = [];
         const fitnessList = [];
         const selfcareList = [];
 
-        const healthHits = Edamam(userSelection.health);
-        healthHits.then(function(result) {
-            console.log('health', result);
-            healthList.push(result[0], result[1], result[2]);
-         });
+        const healthHits = await Edamam(userSelection.health);
+        // console.log('health', healthHits);
+        healthList.push(healthHits[0], healthHits[1], healthHits[2]);
 
         // make api call to YouTube API
-        const fitnessVideo = Youtube(userSelection.fitness);
-        fitnessVideo.then((response) => {
-            console.log('fitness', response);
-            fitnessList.push(response[0], response[1], response[2]);
-        });
-        
-        // make api call to YouTube API
+        const fitnessVideo = await Youtube(userSelection.fitness);
+        // console.log('fitness', fitnessVideo);
+        fitnessList.push(fitnessVideo[0], fitnessVideo[1], fitnessVideo[2]);
+
         selfcareList.push('Drawing tutorial', 'https://www.w3schools.com/tags/att_a_href.asp', 'image for tutorial')
         
-        console.log("results before setting", healthList, fitnessList);
-        console.log(results);
+   
         setResults((results) => ({...results, health: healthList, fitness: fitnessList, selfcare: selfcareList}));
-        console.log(results);
     };
     
 
