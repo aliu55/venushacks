@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import './PlanButton.css';
 import Youtube from '../../api/youtube';
 
@@ -25,7 +26,7 @@ const PlanButton = ({ userSelection, results, setResults }) => {
         });
         
         // make api call to YouTube API
-        selfcareList.push('Drawing tutorial', 'link to tutorial', 'image for tutorial')
+        selfcareList.push('Drawing tutorial', 'https://www.w3schools.com/tags/att_a_href.asp', 'image for tutorial')
 
         setResults((results) => ({...results, health: healthList, fitness: fitnessList, selfcare: selfcareList}));
         
@@ -34,7 +35,9 @@ const PlanButton = ({ userSelection, results, setResults }) => {
 
     return (
         <div>
-            <button className={Object.values(userSelection).every(category => (category != '')) ? "plan-btn" : "plan-btn-disabled"} type="button" onClick={handleClick}>Plan My Day</button>
+            <Link to="/results">
+                <button className={Object.values(userSelection).every(category => (category !== '')) ? "plan-btn" : "plan-btn-disabled"} type="button" onClick={handleClick}>Plan My Day</button>
+            </Link>
         </div>
     )
 };

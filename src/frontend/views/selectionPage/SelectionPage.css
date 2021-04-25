@@ -16,7 +16,7 @@
     margin: 10px 50px;
 }
 
-.category{
+.category-selection{
     font-family: 'Martel', serif;
     letter-spacing: 3px;
     margin: 10px;
@@ -25,3 +25,19 @@
     font-weight: 600;
     font-size: 1.5rem;
 }
+
+.bar{
+    background-color: #f3d1e1;
+    margin-bottom: 40px;
+}
+
+.title-selection{
+    font-family: 'Martel', serif;
+    letter-spacing: 3px;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
