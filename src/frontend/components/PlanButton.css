@@ -12,6 +12,7 @@
     font-family: 'Martel', serif;
     border-style: none;
     text-align: center;
+    margin: 10px
 }
 
 .plan-btn-disabled {
@@ -28,4 +29,5 @@
     font-family: 'Martel', serif;
     border-style: none;
     text-align: center;
+    margin: 10px;
 }
